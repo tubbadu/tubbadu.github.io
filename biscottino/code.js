@@ -1,65 +1,23 @@
-/** formatting:
- *
- * [category] | [text] | [optional: extra msg turns delay] | [optional: extra msg text] | [optional: others]
- * #comment line (note: the FIRST char must be a '#' !
- */
-
-
-/*
-const challengeString = `#begin
-Cin Cin! | Bevete tutti
-Virus! | $1 è brutto! per 3 turni niente bere | 3 | $1 non è più brutto
-penitenza! | $1 $2 $3 muoiono male
-Molestia! | $1 beve 3 sorsi mentre tutti gli altri gli toccano il culo!
-Molestia! | $1 beve 3 sorsi mentre $2 gli fa il solletico!
-Molestia! | $1 infila un dito nel naso di $2 (per favore, della mano...), poi entrambi bevono 2 sorsi
-Molestia! | $1 è un calippo! Si spalma un po' della sua bevuta in faccia e $2 la lecca!
-Molestia! | I giocatori a destra e a sinistra di $1 gli mordono un braccio, poi tutti e tre bevono un sorso!
-Molestia! | $1 è alla gogna! Deve bere 10 piccoli, lenti sorsi mentre tutti gli altri lo fissano con gli occhi spalancati!
-Molestia! | Orgia su $1!!!!!!! Se poi sopravvive all'aggressione, beve pure due sorsi, e che cazzo
-Molestia! | Per 3 turni $1 si siede sulle gambe di $2, che si siede sulle gambe di $3, che se prova a lamentarsi si beve pure due sorsi, stronzo | 3 | Ok potete rialzarvi dalle gambe di quel poveretto...
-Molestia! | Rapidissimo, $1 tira uno schiaffo in faccia a $2! | 0 | Se ha schivato o si è protetto, beve due sorsi e si prende un altro schiaffo!
-Molestia! | $1 lecca il naso a $2, e poi ognuno beve 2 sorsi!
-Molestia! | $1, bevi 3 bei sorsi e alita violentemente in faccia a $2! Se $2 non sbocca complimenti, puoi far bere 3 sorsi a chi vuoi tu!
-Molestia! | $1, fai annusare la tua ascella a $2! E poi beviti anche due sorsi, puzzone dimmerda!
-Molestia! | $1, togliti i calzini e poggiali delicatamente sulla faccia di $2 e $3, che dovranno tenerli per i prossimi 3 turni! E perchè no, bevete un goccio tutti e 3! | 3 | Potete togliervi i calzini dalla faccia! Che schifo Madonna...
-Molestia! | $1, dai una testata a $2! Così, tanto per fare...
-Molestia! | $1, prendi la faccia di $2 e lanciatela nelle tette urlando "COME QUESTE????"
-Molestia! | $1, grattati il buco del culo e fai annusare il ditino a $2! Se puzza vattelo a lavare mentre ti bevi 3 sorsi, sporcaccione!<br>(tip of the day: non usare l'antipulci per lavartelo)
-Molestia! | Sembra un clitoride! $1, fai un ditalino all'orecchio di $2!
-Molestia! | $1, dai una tettata in faccia a $2, poi bevete entrambi 2 sorsi!
-Molestia! | $1 Motorboat a $2!
-Molestia! | Presto, mettete tutti il dito medio della vostra mano destra nel naso del vostro vicino di sinistra! Non potete toglierlo per nessun motivo, pena 3 sorsi per entrambi! | 3 | Okay potete smettere di scaccolarvi a vicenda...
-Molestia! | $1 deve bere 3 sorsi dal suo bicchiere, tenuto da $2 in mezzo alle cosce!
-Molestia! | $1 deve bere 3 sorsi dal suo bicchiere, tenuto da $2 con le tette!
-Molestia! | Presto, toccate tutti un culo diverso dal vostro! L'ultimo a farlo beve 3 sorsi! | 0 | Per chi ha toccato il culo a Baccolino, complimenti buongustai, bevete 2 sorsi per festeggiare!
-Molestia! | $1, solletica delicatamente l'ascella di $2... con la punta della lingua! | 0 | Dio fa raga siete davvero disgustosi, ma chi cazzo l'ha scritta sta porcata, uno psicopatico?
-#end`;*/
+const timeout = setTimeout(init, 500);
 
 var challengeString;
 var challengeArray;
-fetch('https://tubbadu.github.io/biscottino/challenges.config2', {cache: "reload"})
-.then(response => {
-    if (!response.ok) {
-        alert("HTTP error: please try again, or contact that dumbass of the developer, it's surely his fault...")
-        throw new Error("HTTP error " + response.status);
-    }
-    return response.text();
-})
-.then(text => {
-    challengeString = text;
-    console.log(text);
+var players;
+var playersTEMP;
+var nTurns;
+var scheduled;
+var bottle_n;
+function init(){
+    challengeString = document.getElementById("challengesString").innerHTML;
     challengeArray = challengeStringToArray();
-})
-.catch(error => {
-    // Handle/report error
-});
-
-var players = window.location.search.split('?')[1].split('/');
-var playersTEMP = []
-var nTurns = 0;
-var scheduled = [];
-var bottle_n = 1;
+    players = window.location.search.split('?')[1].split('/');
+    playersTEMP = [];
+    nTurns = 0;
+    scheduled = [];
+    bottle_n = 1;
+    console.log("challenges loaded");
+    //console.log(challengeString);
+}
 
 function isGood(sfd){ // conditions for the challengeString string formatting
     let ret = true
@@ -97,7 +55,7 @@ function challengeStringToArray(){ //convert challengeString to challengeArray
                 ret.push(nowCategory + " | " + line);
             }
         }else{
-            console.log("Too short: Skipping line " + i + ": " + line);
+            console.log("Too short: Skipping line " + i + ": \"" + line + "\"");
         }
     }
     return ret;
@@ -115,7 +73,6 @@ function isFine(i){ //TODO conditions for the next challenge extracted
 }
 
 function selectChallenge(){ //returns the right challenge 
-    //console.log(nTurns + "         -        " + scheduled)
     if (challengeArray.length < 1){
         return "FINE | bravissimi avete vinto";
     }
@@ -132,8 +89,6 @@ function selectChallenge(){ //returns the right challenge
         i = getRandomIndex(challengeArray);
     } while(isFine(i) == false);
     nTurns++;
-    console.log(challengeArray)
-    console.log(i)
     return challengeArray.splice(i, 1)[0];
 }
 
@@ -165,6 +120,12 @@ function getColor(cat){
             break;
         case "cin cin!":
             return ["#00FF06", "#000000"]; //verde chiaro
+            break;
+        case "sfida!":
+            return ["#FF8DE2", "#000000"]; //verde chiaro
+            break;
+        case "così, a cazzo di cane!":
+            return ["#FF9400", "#000000"]; //verde chiaro
             break;
         default:
             return ["#FFFFFF", "#000000"]; //BIANCO
@@ -218,13 +179,21 @@ function changeBottle(){
     document.getElementById("bottle").src = "bottle" + bottle_n + ".png"
 }
 
+function removeTags(str) {
+    if ((str===null) || (str===''))
+    return false;
+    else
+    str = str.toString();
+    return str.replace( /(<([^>]+)>)/ig, '');
+ }
+
 function next() {
     changeBottle();
     let out = selectChallenge();
     extractPlayers();
     let text = setChallenge(out);
     console.log(text);
-    responsiveVoice.speak(document.getElementById("challenge").innerHTML.replaceAll('<br>', ' '), 'Italian Female'); //add replace to remove all <text>
+    responsiveVoice.speak(removeTags(document.getElementById("challenge").innerHTML), 'Italian Female'); //add replace to remove all <text>
     
 } 
 
