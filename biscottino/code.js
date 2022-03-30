@@ -48,6 +48,7 @@ fetch('https://tubbadu.github.io/biscottino/challenges.config', {cache: "no-stor
 })
 .then(text => {
     challengeString = text;
+    alert(text);
     challengeArray = challengeStringToArray();
 })
 .catch(error => {
