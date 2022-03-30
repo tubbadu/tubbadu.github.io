@@ -38,7 +38,7 @@ Molestia! | $1, solletica delicatamente l'ascella di $2... con la punta della li
 
 var challengeString;
 var challengeArray;
-fetch('https://tubbadu.github.io/biscottino/challenges.config', {cache: "no-store"})
+fetch('https://tubbadu.github.io/biscottino/challenges.config2', {cache: "reload"})
 .then(response => {
     if (!response.ok) {
         alert("HTTP error: please try again, or contact that dumbass of the developer, it's surely his fault...")
@@ -48,7 +48,7 @@ fetch('https://tubbadu.github.io/biscottino/challenges.config', {cache: "no-stor
 })
 .then(text => {
     challengeString = text;
-    alert(text);
+    console.log(text);
     challengeArray = challengeStringToArray();
 })
 .catch(error => {
@@ -62,7 +62,7 @@ var scheduled = [];
 var bottle_n = 1;
 
 function isGood(sfd){ // conditions for the challengeString string formatting
-    var ret = true
+    let ret = true
     if(sfd.charAt(0) == '#'){
         ret = false;
     }else if(sfd.length < 3){
@@ -74,15 +74,39 @@ function isGood(sfd){ // conditions for the challengeString string formatting
     }
     return ret
 }
-function challengeStringToArray(){ //convert challengeString to challengeArray
+function challengeStringToArray2(){ //convert challengeString to challengeArray
     ret = challengeString.split(/\r?\n/);
     ret = ret.filter(item => isGood(item))
     return ret
 }
 
+function challengeStringToArray(){ //convert challengeString to challengeArray
+    let challengesSplitted = challengeString.split(/\r?\n/);
+    let nowCategory = "";
+    let ret = new Array();
+    for (let i=0; i<challengesSplitted.length; i++){
+        let line = challengesSplitted[i].trim();
+        if(line.length > 1){
+            if(line.startsWith("#")){
+                //comment, skipping
+            }else if(line.startsWith("%")){
+                nowCategory = line.replaceAll("%", "").trim()
+            }
+            else if(nowCategory != ""){
+                //append
+                ret.push(nowCategory + " | " + line);
+            }
+        }else{
+            console.log("Too short: Skipping line " + i + ": " + line);
+        }
+    }
+    return ret;
+}
+
+
 
 function getRandomIndex(arr){ //select a random index
-    var index = Math.floor(Math.random() * arr.length);
+    let index = Math.floor(Math.random() * arr.length);
     return index;
 }
 
@@ -95,7 +119,7 @@ function selectChallenge(){ //returns the right challenge
     if (challengeArray.length < 1){
         return "FINE | bravissimi avete vinto";
     }
-    for (var i = 0; i < scheduled.length; i++){
+    for (let i = 0; i < scheduled.length; i++){
         if (scheduled[i][0] == nTurns){
             return scheduled.splice(i, 1)[i][1];//[1];
         }
@@ -103,11 +127,13 @@ function selectChallenge(){ //returns the right challenge
     if(scheduled.length > 0){
 
     }
-    var i = 0;
+    let i = 0;
     do{
         i = getRandomIndex(challengeArray);
     } while(isFine(i) == false);
     nTurns++;
+    console.log(challengeArray)
+    console.log(i)
     return challengeArray.splice(i, 1)[0];
 }
 
@@ -148,8 +174,8 @@ function getColor(cat){
 
 function extractPlayers(){
     playersTEMP = [];
-    for (var i = 0; i < 3; i++){
-        var pl = "";
+    for (let i = 0; i < 3; i++){
+        let pl = "";
         do{
             pl = players[getRandomIndex(players)];
         }while(playersTEMP.includes(pl));
@@ -193,13 +219,12 @@ function changeBottle(){
 }
 
 function next() {
-    alert(challengeString);
     changeBottle();
     let out = selectChallenge();
     extractPlayers();
     let text = setChallenge(out);
     console.log(text);
-    responsiveVoice.speak(document.getElementById("challenge").innerHTML.replaceAll('<br>', ' '), 'Italian Female');
+    responsiveVoice.speak(document.getElementById("challenge").innerHTML.replaceAll('<br>', ' '), 'Italian Female'); //add replace to remove all <text>
     
 } 
 
