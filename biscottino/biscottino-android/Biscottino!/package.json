@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "name": "Biscottino!",
+    "name": "biscottino",
     "app-name": "Biscottino!",
     "package-name": "webview",
     "project-type": "webview",
@@ -22,7 +22,7 @@
     },
     "project-name": "Biscottino!",
     "theme": {
-        "fullScreen": true
+        "fullScreen": false
     },
     "screenOrientation": "landscape"
 }
