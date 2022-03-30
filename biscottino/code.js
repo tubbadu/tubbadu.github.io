@@ -41,6 +41,7 @@ var challengeArray;
 fetch('https://tubbadu.github.io/biscottino/challenges.config')
 .then(response => {
     if (!response.ok) {
+        alert("HTTP error: please try again, or contact that dumbass of the developer, it's surely his fault...")
         throw new Error("HTTP error " + response.status);
     }
     return response.text();
@@ -191,12 +192,13 @@ function changeBottle(){
 }
 
 function next() {
-    changeBottle()
+    changeBottle();
     let out = selectChallenge();
     extractPlayers();
     let text = setChallenge(out);
-    console.log(text)
-    responsiveVoice.speak(document.getElementById("challenge").innerHTML, 'Italian Female');
+    console.log(text);
+    responsiveVoice.speak(document.getElementById("challenge").innerHTML.replaceAll('<br>', ' '), 'Italian Female');
+    
 } 
 
 function settings() {
