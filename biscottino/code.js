@@ -193,6 +193,7 @@ function changeBottle(){
 }
 
 function next() {
+    alert(challengeString);
     changeBottle();
     let out = selectChallenge();
     extractPlayers();
