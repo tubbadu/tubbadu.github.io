@@ -15,7 +15,7 @@
         "start:dev": "node .",
         "build": "androidjs build"
     },
-    "author": "",
+    "author": "tubbadu",
     "license": "ISC",
     "dependencies": {
         "androidjs": "^2.0.2"

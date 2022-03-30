@@ -38,7 +38,7 @@ Molestia! | $1, solletica delicatamente l'ascella di $2... con la punta della li
 
 var challengeString;
 var challengeArray;
-fetch('https://tubbadu.github.io/challenges.config')
+fetch('https://tubbadu.github.io/biscottino/challenges.config')
 .then(response => {
     if (!response.ok) {
         throw new Error("HTTP error " + response.status);
