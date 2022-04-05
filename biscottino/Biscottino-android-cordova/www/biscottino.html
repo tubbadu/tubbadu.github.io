@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<title>Biscottino!</title>
+		<style type="text/css">
+			@font-face {
+				font-family: SuplexmentaryComicNC;
+				src: url('SuplexmentaryComicNC.ttf');
+			}
+			html, body {
+				margin: 0;
+				height: 100%;
+			}
+			main{
+				width: 100%;
+				height: 100%;
+			}
+			table{
+				width: 100%;
+			}
+			.top{
+				height: 15%;
+			}
+			.middle{
+				height: 70%;
+			}
+			.bottom{
+				height: 15%;
+			}
+			button{
+				border: 0px;
+				background-color: transparent;
+			}
+			.buttonUP{
+				height: 100%;
+				width: 10%;
+			}
+			.btn1 img{
+				height: 10%;
+			}
+			.categoryDiv{
+				font-family: SuplexmentaryComicNC;
+				font-weight: bold;
+			}
+			.challengeDiv{
+				font-family: SuplexmentaryComicNC;
+			}
+			.nTurn{
+				font-family: SuplexmentaryComicNC;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<main id="main">
+			<div>
+				<table id="Table">
+					<tr class="top">
+						<td>
+							<table>
+								<td class="buttonUP">
+									<button class="btn1" type="button" name="settings" onclick="settings()">
+										<img class="img1" src="img/biscottino.png" width="70vh" id="biscottino"></img>
+									</button>
+								</td>
+								<td>
+									<div align="center" id="category" class="categoryDiv"> Biscottino!</div>
+								</td>
+								<td class="buttonUP">
+									<div id="nTurn" class="nTurn">
+										
+									</div>
+								</td>
+							</table>
+						</td>
+					</tr>
+					<tr class="middle">
+						<td id="cazzopalle">
+							<div align="center" id="challenge" class="challengeDiv">
+								An App for the Alcoholics!<p>
+								click the bottle to start drinking!
+							</div>
+						</td>
+					</tr>
+					<tr class="bottom">
+						<td>
+							<div align="right">
+								<button class="btn2" type="submit" name="avanti" onclick="next()">
+									<img src="img/bottle1.png" width="200vw" id="bottle"></img>
+								</button>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</main>
+		<footer>
+			<script src="./config.js"></script>
+			<script src="js/code.js"></script>
+			<!-- <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+			<script src="https://code.responsivevoice.org/responsivevoice.js?key=2SX6cPEw"></script>
+			-->
+			<script src="cordova.js"></script>
+      		<script src="js/index.js"></script>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<title>Biscottino!</title>
+		<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+		<style type="text/css">
+			@font-face {
+				font-family: SuplexmentaryComicNC;
+				src: url('SuplexmentaryComicNC.ttf');
+			}
+
+			main{
+				width: 1000px;
+				height: 700px;
+				background-color: red;
+			}
+
+			div {
+				font-size: 10vh /* se ci sono più di 4 righe, riduci*/
+			}
+			
+			.app{
+				height: 52vh; 
+				width: 99vw;
+			}
+
+			.appBody{
+				font-family: SuplexmentaryComicNC;
+				display: table;
+				height: 100%; 
+				width: 100%;
+			}
+
+			.challengeDiv{
+				display: table-cell;
+				
+				vertical-align: middle;
+				height: 60%;
+			}
+			.categoryDiv{
+				font-family: SuplexmentaryComicNC;
+				font-weight: bold;
+				font-size: 12vh;
+				vertical-align: middle;
+				height: 20%;
+			}
+
+			.bottomBar{
+				display: block;
+				margin-left: auto; 
+				margin-right: 0;
+			}
+
+			.btn1{
+				border: 0px;
+				background-color: transparent;
+				height: 90%;
+				width: 90%;
+			}
+
+			.btn2{
+				border: 0px;
+				background-color: transparent;
+				height: 30%;
+				width: 30%;
+			}
+
+			table{
+				border: 0px;
+				width: 100%;
+			}
+			.btntd{
+				width: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<main>
+				<table>
+					<tr>
+						<th class="btntd">
+							<button class="btn1" type="button" name="settings" onclick="settings()">
+							<img src="biscottino.png" width="60vw" height="60vh"></img>
+							</button>
+						</th>
+						<th>
+							<div class="categoryDiv" align="center" id="category">BISCOTTINO</div>
+						</th>
+						<th class="btntd">
+							<div width="60vw"></div>
+						</th>
+					</tr>
+				</table>
+
+				<div class="appBody">
+					<div class="challengeDiv" align="center" id="challenge">clicca la bottiglia per iniziare!</div>
+				</div>
+
+				<div class="bottomBar" align="right">
+					<button class="btn2" type="button" name="avanti" onclick="next()">
+						<img src="bottle1.png"  width="100%" height="100%"id="bottle"></img>
+					</button>
+				</div>
+			<var id="challengesString" hidden>NULL</var>
+			<script src="./config.js"></script>
+			<script src="./code.js"></script>
+		</main>
+		<footer>
+			<script src="https://code.responsivevoice.org/responsivevoice.js?key=2SX6cPEw"></script>
+		</footer>
+	</body>
+</html>

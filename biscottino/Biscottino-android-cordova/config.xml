@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.tubbadu.biscottino" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Biscottino!</name>
+    <description>An App for the Alcoholics</description>
+    <author email="tubbadu@gmail.com" href="https://tubbadu.altervista.org">
+        tubbadu
+    </author>
+    <content src="settings.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <icon src="www/img/logo.png" />
+    <preference name="Fullscreen" value="true" />
+</widget>

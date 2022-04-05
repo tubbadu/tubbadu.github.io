@@ -81,7 +81,7 @@ $1 è un poliziotto americano! Con la sua pistola da 6 colpi può sparare ai cri
 $1 è un ladro! Fino a nuovo ordine, tutti i sorsi che dovrà bere li berrà dal bicchiere di un altro giocatore a sua scelta (ogni volta diverso dalla volta prima, mi raccomando!) | 5 | Basta rubare le bevute degli altri!
 $1 si immola per la patria! Per i prossimi 3 turni, tutti i sorsi che spetterebbero agli altri giocatori, li berrà lui invece! | 3 | Okay va bene immolarsi per la patria ma così stiamo esagerando, puoi smettere di bere al posto degli altri!
 $1 è Medusa! Ogni volta che qualcuno lo guarda negli occhi beve 2 sorsi! | 4 | Medusa ha perso il suo potere!
-$1 è il <s>pompinaro</s>, ehm, no, scusate, volevo dire il pompiere, quando urlerà TERREMOTO OOOO tutti dovranno buttarsi a terra proteggendosi la testa, l'ultimo che lo fa ogni volta beve 4 sorsi! | 5 | Il pompiere è andato in pensione!
+$1 è il <s>pompinaro</s>, ehm, no, scusate, volevo dire, il pompiere, quando urlerà TERREMOTO OOOO tutti dovranno buttarsi a terra proteggendosi la testa, l'ultimo che lo fa ogni volta beve 4 sorsi! | 5 | Il pompiere è andato in pensione!
 UN, DUE, TRE, STELLA! Quando vorrà, $1 potrà urlarlo, e tutti quelli che vedrà muoversi dopo berranno 2 sorsi! | 5 | Non si gioca più a un due tre stella!
 $1 è l'animatore! ogni volta che urlerà ROCCIA, CAROTA, BANANA, SOLDATINI o EREN, chi sbaglierà la posizione berrà 4 sorsi | 5 | Sono finite le vacanze! L'animatore non può più dare ordini ai bambini!
 $1 è un influencer! Per i prossimi 5 turni, tutto quello che berrà lui lo dovranno bere anche gli altri giocatori! | 5 | Smettetela di imitare l'influencer, banda di pecoroni che non siete altro!

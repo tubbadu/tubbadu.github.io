@@ -1,0 +1,32 @@
+{
+  "name": "io.tubbadu.biscottino",
+  "displayName": "Biscottino!",
+  "version": "2.0.0",
+  "description": "An App for the Alcoholics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "tubbadu",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.1",
+    "cordova-browser": "^6.0.0",
+    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-tts": "^0.2.3",
+    "es6-promise-plugin": "^4.2.2"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-tts": {},
+      "cordova-plugin-screen-orientation": {}
+    }
+  }
+}
