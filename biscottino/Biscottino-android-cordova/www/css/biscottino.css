@@ -1,0 +1,55 @@
+@font-face {
+    font-family: SuplexmentaryComicNC;
+    src: url('../SuplexmentaryComicNC.ttf');
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body{
+    background-image: url("../img/biscottiniSfondoVerticale.png");
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+table{
+    width: 100%;
+}
+.top{
+    height: 15%;
+}
+.middle{
+    height: 70%;
+}
+.bottom{
+    height: 15%;
+}
+button{
+    border: 0px;
+    background-color: transparent;
+}
+.buttonUP{
+    height: 100%;
+    width: 10%;
+}
+.btn1 img{
+    height: 10%;
+}
+.categoryDiv{
+    font-family: SuplexmentaryComicNC;
+    font-weight: bold;
+}
+.challengeDiv{
+    font-family: SuplexmentaryComicNC;
+}
+.nTurn{
+    font-family: SuplexmentaryComicNC;
+    text-align: center;
+} 
+.welcome{
+    text-shadow: -1px 1px 0 #FFFFFF,
+    1px   1px 0 #FFFFFF,
+    1px  -1px 0 #FFFFFF,
+    -1px -1px 0 #FFFFFF;
+}

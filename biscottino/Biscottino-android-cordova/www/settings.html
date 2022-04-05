@@ -1,44 +1,26 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title>Biscottino! - settings</title>
-    <style type="text/css">
-      @font-face {
-        font-family: SuplexmentaryComicNC;
-        src: url('SuplexmentaryComicNC.ttf');
-      }
-      main{
-        height: 100%;
-        width: 100%;
-      }
-      textarea{
-        font-family: SuplexmentaryComicNC;
-        height: 70vh;
-        width: 80%;
-       /* font-size: 10vh;*/
-      }
-
-      button{
-        /*font-size: 10vh;*/
-        font-family: SuplexmentaryComicNC;
-        height: 15vh;
-      }
-    </style>
-  </head>
-  <body>
-    <header></header>
-    <main id="main">
-      <div align="center" width="90vh" id="mainDiv">
-        <textarea id='text' name="text" placeholder="Nomi degli alcolisti..."></textarea>
-        <br>
-        <button id="btn" type="button" value="Submit" onClick="onSubmit()">Ubriachiamoci!</button>
-      </div>
-      <script src="js/settings.js"></script>
-    </main>
-    <footer>
-      <script src="cordova.js"></script>
-      <script src="js/index.js"></script>
-    </footer>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Biscottino! - settings</title>
+		<link rel="stylesheet" href="css/settings.css">
+	</head>
+	<body>
+		<header></header>
+		<main id="main">
+			<div align="center" width="90vh" id="settingsDiv" style="display: none">
+				<textarea id='text' name="text" placeholder="Nomi degli alcolisti..."></textarea>
+				<br>
+				<button id="btn" type="button" value="Submit" onClick="onSubmit()">Ubriachiamoci!</button>
+			</div>
+			<div id="splashScreenDiv" class="splashScreenDiv" align="center" style="display: block">
+				<img class="titolo" src="img/titolo.png"></img>
+			</div>
+			<script src="js/settings.js"></script>
+		</main>
+		<footer>
+			<script src="cordova.js"></script>
+			<script src="js/index.js"></script>
+		</footer>
+	</body>
 </html>

@@ -334,5 +334,5 @@ function next() {
 } 
 
 function settings() {
-    window.open("settings.html", "_self")
+    window.open("settings.html?noSplash", "_self")
 }

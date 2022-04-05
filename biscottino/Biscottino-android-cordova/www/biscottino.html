@@ -3,54 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Biscottino!</title>
-		<style type="text/css">
-			@font-face {
-				font-family: SuplexmentaryComicNC;
-				src: url('SuplexmentaryComicNC.ttf');
-			}
-			html, body {
-				margin: 0;
-				height: 100%;
-			}
-			main{
-				width: 100%;
-				height: 100%;
-			}
-			table{
-				width: 100%;
-			}
-			.top{
-				height: 15%;
-			}
-			.middle{
-				height: 70%;
-			}
-			.bottom{
-				height: 15%;
-			}
-			button{
-				border: 0px;
-				background-color: transparent;
-			}
-			.buttonUP{
-				height: 100%;
-				width: 10%;
-			}
-			.btn1 img{
-				height: 10%;
-			}
-			.categoryDiv{
-				font-family: SuplexmentaryComicNC;
-				font-weight: bold;
-			}
-			.challengeDiv{
-				font-family: SuplexmentaryComicNC;
-			}
-			.nTurn{
-				font-family: SuplexmentaryComicNC;
-				text-align: center;
-			}
-		</style>
+		<link rel="stylesheet" href="css/biscottino.css">
 	</head>
 	<body>
 		<header></header>
@@ -66,7 +19,7 @@
 									</button>
 								</td>
 								<td>
-									<div align="center" id="category" class="categoryDiv"> Biscottino!</div>
+									<div align="center" id="category" class="categoryDiv"><div class="welcome" style="font-size: 55px;">Biscottino!</div></div>
 								</td>
 								<td class="buttonUP">
 									<div id="nTurn" class="nTurn">
@@ -79,8 +32,10 @@
 					<tr class="middle">
 						<td id="cazzopalle">
 							<div align="center" id="challenge" class="challengeDiv">
-								An App for the Alcoholics!<p>
-								click the bottle to start drinking!
+								<div class="welcome">
+									<i>An App for the Alcoholics!</i>
+									<p style="font-size: 20px;">click the bottle to start drinking!</p>
+								</div>
 							</div>
 						</td>
 					</tr>

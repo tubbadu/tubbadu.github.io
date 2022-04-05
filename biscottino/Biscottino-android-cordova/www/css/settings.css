@@ -1,0 +1,64 @@
+@font-face {
+    font-family: SuplexmentaryComicNC;
+    src: url('../SuplexmentaryComicNC.ttf');
+}
+main{
+    height: 100%;
+    width: 100%;
+}
+textarea{
+    font-family: SuplexmentaryComicNC;
+    height: 90vh;
+    width: 80%;
+ /* font-size: 10vh;*/
+    font-size: 8vw;
+    text-shadow: -1px 1px 0 #FFFFFF,
+    1px   1px 0 #FFFFFF,
+    1px  -1px 0 #FFFFFF,
+    -1px -1px 0 #FFFFFF;
+    background: transparent;
+    border: none;
+    overflow: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-align: center;	
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+
+button{
+    font-size: 10vw;
+    font-family: SuplexmentaryComicNC;
+    height: 14vw;
+}
+body{
+    background-image: url("../img/biscottiniSfondoVerticale.png");
+}
+.titolo{
+    width: 80vw;
+}
+/*
+.splashScreenDiv{
+    width: 99vw;
+    height: 99vh;
+}*/
+
+html{
+    height:99%;
+}
+body{
+    height:99%;
+}
+.splashScreenDiv{
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+} 
