@@ -25,7 +25,7 @@ table{
 .bottom{
     height: 15%;
 }
-button{
+.buttons{
     border: 0px;
     background-color: transparent;
 }
@@ -52,4 +52,8 @@ button{
     1px   1px 0 #FFFFFF,
     1px  -1px 0 #FFFFFF,
     -1px -1px 0 #FFFFFF;
+}
+
+td{
+    width: 100%;
 }

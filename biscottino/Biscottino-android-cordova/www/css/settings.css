@@ -8,7 +8,7 @@ main{
 }
 textarea{
     font-family: SuplexmentaryComicNC;
-    height: 90vh;
+    height: 60vh;
     width: 80%;
  /* font-size: 10vh;*/
     font-size: 8vw;
@@ -35,6 +35,8 @@ button{
     font-size: 10vw;
     font-family: SuplexmentaryComicNC;
     height: 14vw;
+    border-radius: 4vw;
+    border-width: 0.5vw;
 }
 body{
     background-image: url("../img/biscottiniSfondoVerticale.png");
@@ -42,11 +44,6 @@ body{
 .titolo{
     width: 80vw;
 }
-/*
-.splashScreenDiv{
-    width: 99vw;
-    height: 99vh;
-}*/
 
 html{
     height:99%;
@@ -54,11 +51,28 @@ html{
 body{
     height:99%;
 }
-.splashScreenDiv{
+.splashScreen{
     position: absolute;
+    /*height: 99vh;*/
     margin: auto;
     top: 50%;
     right: 0;
     bottom: 50%;
     left: 0;
+    
 } 
+
+.splashImg{
+    bottom: 0;
+    width: 80vw;
+}
+/*
+.settings{
+    height: 90%;
+}*/
+
+.autoread{
+    font-size: 5vw;
+    height: 10vw;
+    background-color: #99ff33;
+}

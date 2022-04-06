@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<title>Biscottino!</title>
+	</head>
+	<body>
+		<header>
+			<link rel="stylesheet" href="css/settings.css">
+			<link rel="stylesheet" href="css/biscottino.css">
+		</header>
+		<main id="main">
+<!------------------------------------------------------------------------------------------------------------>
+			<div class="splashScreen" id="splashScreen" align="center" style="display: block">
+				<img class="splashImg" class="titolo" src="img/titolo.png"></img>
+			</div>
+<!------------------------------------------------------------------------------------------------------------>
+			<div class="settings" id="settings" align="center" width="90vh" style="display: none">
+				<p style="height: 15px;"></p>
+				<textarea id='text' name="text" placeholder="Nomi degli alcolisti..."></textarea>
+				<p>
+				<button class="autoread" id="autoread" type="button" value="Submit" onClick="changeAutoread()" style="outline: 2px;">AutoRead</button>
+				<p>
+				<button id="btn" type="button" value="Submit" onClick="onSubmit()" style="outline: 2px;">Ubriachiamoci!</button>
+			</div>
+<!------------------------------------------------------------------------------------------------------------>
+			<div id="biscottino" style="display: none">
+				<table id="Table">
+					<tr class="top" id="top">
+						<td id="top_td">
+							<table>
+								<td class="buttonUP">
+									<button class="buttons" class="btn1" type="button" name="settings" onclick="settings()">
+										<img class="img1" src="img/biscottino.png" width="70vh" id="biscottino"></img>
+									</button>
+								</td>
+								<td>
+									<div align="center" id="category" class="categoryDiv"><div class="welcome" style="font-size: 55px;">Biscottino!</div></div>
+								</td>
+								<td class="buttonUP">
+									<div id="nTurn" class="nTurn">
+										
+									</div>
+								</td>
+							</table>
+						</td>
+					</tr>
+					<tr class="middle">
+						<td id="cazzopalle">
+							<div align="center" id="challenge" class="challengeDiv">
+								<div class="welcome">
+									<i>An App for the Alcoholics!</i>
+									<p style="font-size: 20px;">click the bottle to start drinking!</p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr class="bottom">
+						<td>
+							<table>
+								<td>
+									<div>
+										<button class="buttons" class="btn3" type="submit" name="avanti" onclick="readText()">
+											<img src="img/speaker.png" height="50vw" id="speaker"></img>
+										</button>
+									</div>
+								</td>
+								<td>
+									<div align="right">
+										<button class="buttons" class="btn2" type="submit" name="avanti" onclick="next()">
+											<img src="img/bottle1.png" width="200vw" id="bottle"></img>
+										</button>
+									</div>
+								</td>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+<!------------------------------------------------------------------------------------------------------------>
+		</main>
+		<footer>
+			<script src="./config.js"></script>
+			<!-- <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+			<script src="https://code.responsivevoice.org/responsivevoice.js?key=2SX6cPEw"></script>
+			-->
+			<script src="cordova.js"></script>
+			<script src="js/index.js"></script>
+		</footer>
+	</body>
+</html>

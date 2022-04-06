@@ -24,6 +24,8 @@ $1 deve bere 3 sorsi dal suo bicchiere, tenuto da $2 in mezzo alle cosce!
 $1 deve bere 3 sorsi dal suo bicchiere, tenuto da $2 con le tette!
 Presto, toccate tutti un culo diverso dal vostro! L'ultimo a farlo beve 3 sorsi! | 0 | Per chi ha toccato il culo a Baccolino, complimenti buongustai, bevete 2 sorsi per festeggiare!
 $1, solletica delicatamente l'ascella di $2... con la punta della lingua! | 0 | Dio fa raga siete davvero disgustosi, ma chi cazzo l'ha scritta sta porcata, uno psicopatico?
+Forza, date tutti uno schiaffo in faccia al vostro vicino di sinistra! | 0 | Chi l'ha tirato piano beve 3 sorsi, non bisogna avere pietà per gli alcolizzati!
+$1, afferra $2 dalla gola e versagli un po' della tua bevuta in bocca esclamando "Oh sì brutta troia prendilo tutto"!
 
 #####################################################################################
 
@@ -40,6 +42,13 @@ Ad Ale che perde! 5 sorsi per tutti!
 Sapete che ora è? È l'ora di bere 3 sorsi a testa!!!
 <b>BERE EEEE!!! MI PIACE BERE EEEEEE!!!</b><br>Se anche a te piace bere bevi 5 sorsi!
 Che dite, ce la finiamo la bevuta al goccio tutti insieme?
+Tutti quelli a cui non piace il proprio nome bevono 2 sorsi!
+Chi mette la panna nella carbonara beve 4 sorsi! Traditore della patria!
+Chi cuoce le uova da entrambi i lati beve 4 sorsi, pazzi furiosi che non siete altro | 0 | Sorella, così è la vita!
+Bevete tanti sorsi quante dosi di vaccino anticovid avete fatto!
+Alzi la mano chi è ubriaco! | 0 | Per riequilibrare la situazione, tutti gli altri finiscono la bevuta al goccio!
+Chi è nato in un giorno pari beve 3 sorsi! | Facciamo che bevono 3 sorsi anche gli altri, così non si sentono discriminati!
+Chi ha il ciclo in questo momento beve 3 sorsi, l'alcol fa bene ai crampi!
 
 #####################################################################################
 
@@ -72,6 +81,7 @@ Sfida a pollicione, $1 vs $2! 3 sorsi in palio! Gli altri giocatori scommettono 
 Sfida tra puttane! $1 e $2 dovranno ripetere "MI PIACE CIUCCIARE I CAZZI" più velocemente possibile mentre si fissano negli occhi, il primo che smette si beve 4 sorsi! Troia schifosa!
 Sumo! $1 prova a sollevare $2, se riesce a tenerlo in aria per almeno 5 secondi può distribuire 5 sorsi a chi vuole! Altrimenti, se li beve tutti e 5 lui hihihi
 Sfida di pompini! $1 e $2, ciucciate con passione il pollice destro e sinistro di $3, che decreterà il vincitore!
+Sfida di caccole! $1 e $2, scaccolatevi con passione! Chi tira fuori la caccola più grossa vince, 3 bei sorsi in palio!
 
 #####################################################################################
 
@@ -167,6 +177,8 @@ Altolà il sudore! $1, tieni le braccia sollevate in alto per più turni possibi
 Tutti quelli che stanno toccando un bicchiere pieno, 3 sorsi da quel bicchiere! Alcolizzati che non siete altro!
 $1 e $2, bevete 3 sorsi e scambiatevi di posto!
 $1, $2 e $2, pensate ciascuno ad un numero, e poi esclamatelo tutti insieme! Dopodichè, sommate i numeri detti da $1 e $2, poi moltiplicateli per quello dello da $3, poi sommate 1 a questo risultato, e poi fate la divisione quoziente e resto per il numero di giocatori! Bevete tutti tanti sorsi quanto il risultato! | 0 | Chi si è lamentato beve 5 sorsi aggiuntivi, umanista del cazzo
+Chi sta toccando un telefono diverso da questo in questo momento beve 3 sorsi, razza di asociali!
+Chi odia la Neglia beve tanti sorsi quanto era la sua media di italiano con lei!
 
 #####################################################################################
 
@@ -193,6 +205,9 @@ Chi ha le tette più grandi beve 3 sorsi!
 $1, fai un succhiotto a $2! Poi bevete 2 sorsi a testa!
 $1, infilati entrambe le mani nelle mutande a tenerti il pacco/figa/ecc e bevi 3 sorsi senza mani!
 $1, lecca in modo sensuale il collo di $2, poi bevete entrambi 2 sorsi!!
+A che età vi siete masturbati la prima volta? Rispondete a turno dopo aver bevuto 1 sorso, $1 inizia!
+A turno, confessate con quante persone avete fatto zozzerie, e poi bevete altrettanti sorsi! $1 inizia.
+
 
 #####################################################################################
 
@@ -200,4 +215,7 @@ $1, lecca in modo sensuale il collo di $2, poi bevete entrambi 2 sorsi!!
 ##SET COLOR!
 $1, la prossima volta che dovrai bere qualcosa, TRIPLICA il numero di sorsi!
 Questa è tosta ragazzi! Per i prossimi 5 turni, tutti i sorsi sono raddoppiati! E sì, anche le bevute al goccio ;) | 5 | Okay raga basta raddoppiare le bevute non voglio uccidervi
+Fino a nuovo ordine, ogni volta che qualcuno dovrà bere qualcosa si berrà altri 3 sorsi extra! | 3 | Okay, basta bere sorsi extra!
+$1 e $2, la prossima volta che dovrete bere qualcosa, dovrete berlo liscio!
+
 ############################### END ################################################`;
